@@ -1,9 +1,7 @@
-<ul>    
-    <li *ngFor='let post of posts;'>    
-        <app-card 
-            [title]="post.title"
-            [imageUrl] = "post.imageUrl"
-            [username]="post.username"
-            [content]="post.content"
-        ></app-card>    
-</ul>
+<app-card 
+    *ngFor='let post of posts;'
+    [title]="post.title"
+    [imageUrl] = "post.imageUrl"
+    [username]="post.username"
+    [content]="post.content"
+></app-card>    
