@@ -2,12 +2,20 @@
   <div class="columns is-centered">
     <div class="box column is-one-third">
       <h1 class="title has-text-centered">Typing Challenge</h1>
+
+      <p class="has-text-centered">
+        <span 
+          *ngFor="let letter of randomSentence.split(''); let i =index;" 
+          [ngStyle]="{'color': randomSentence[i] === enteredText[i] ? 'green' : enteredText[i] ? 'red' : 'black'}"
+        >{{ randomSentence[i] }}</span> 
+      </p>
+
       <div class="field">
-        <p class="has-text-centered">Text to be copied....</p>
+        <input class="input" (input)="detectChangeInText($event)"/>
       </div>
-      <div class="field">
-        <input class="input"/>
+      <div class="box has-text-centered" *ngIf="isCorrect">
+        <h1 class="title has-text-centered">Success!</h1>
       </div>
-      <h2 class="title has-text-centered">You win!</h2>
+    </div>
   </div>
 </div>
