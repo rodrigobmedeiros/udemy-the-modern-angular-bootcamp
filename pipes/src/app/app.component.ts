@@ -9,6 +9,7 @@ export class AppComponent {
   name: string = '';
   date: string = '';
   amount: number = 0;
+  decimal: number = 0;
 
   onNameChange(event: Event) {
     const value = (event.target as HTMLInputElement).value;
@@ -23,5 +24,10 @@ export class AppComponent {
   onAmountChange(event: Event) {
     const value = (event.target as HTMLInputElement).value;
     this.amount = parseFloat(value);
+  }
+
+  onDecimalChange(event: Event) {
+    const value = (event.target as HTMLInputElement).value;
+    this.decimal = parseFloat(value);
   }
 }
