@@ -10,6 +10,7 @@ export class AppComponent {
   date: string = '';
   amount: number = 0;
   decimal: number = 0;
+  distance: number = 0;
 
   onNameChange(event: Event) {
     const value = (event.target as HTMLInputElement).value;
@@ -29,5 +30,10 @@ export class AppComponent {
   onDecimalChange(event: Event) {
     const value = (event.target as HTMLInputElement).value;
     this.decimal = parseFloat(value);
+  }
+
+  onDistanceChange(event: Event) {
+    const value = (event.target as HTMLInputElement).value;
+    this.distance = parseFloat(value);
   }
 }

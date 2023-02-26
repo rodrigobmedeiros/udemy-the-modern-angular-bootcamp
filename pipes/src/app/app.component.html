@@ -54,4 +54,17 @@
       </div>
     </div>
   </div>
+
+  <div class="row">
+    <div class="form-group col">
+      <label>Distance (miles)</label>
+      <input class="form-control" (input)="onDistanceChange($event)"/>
+    </div>
+    <div class="col">
+      <label><b>Distance (km)</b></label>
+      <div>
+        {{ distance | converter | number: '1.3-3' }}
+      </div>
+    </div>
+  </div>
 </div>
